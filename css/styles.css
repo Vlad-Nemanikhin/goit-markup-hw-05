@@ -120,7 +120,7 @@ header {
   color: var(--hover-color);
 
   font-size: 14px;
-  line-height: 16,41px;
+  line-height: 16px;
   font-weight: 500;
 }
 
@@ -145,7 +145,9 @@ header {
   display: block;
   padding: 32px 0;
   color: var(--h-color);
+  font-size: 14px;
   font-weight: 500;
+  line-height: 16px;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -162,7 +164,7 @@ header {
   color: var(--p-color);
 
   font-size: 14px;
-  line-height: 16,41px;
+  line-height: 16px;
   font-weight: 500;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -172,7 +174,11 @@ header {
   margin-right: var(--inner-section-margin);
 }
 
-ul a:hover, ul a:focus, ul a:active {
+.main-navigation a:hover, .main-navigation a:focus, .main-navigation a:active {
+  color: var(--hover-color);
+}
+
+.main-contacts a:hover, .main-contacts a:focus, .main-contacts a:active {
   color: var(--hover-color);
 }
 
@@ -427,7 +433,7 @@ ul a:hover, ul a:focus, ul a:active {
   border-radius: 50%;
   background: inherit;
 
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
@@ -572,6 +578,10 @@ address p {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.footer-links a:hover, .footer-links:focus {
+  color: var(--hover-color);
+}
+
 .connect{
   padding-top: 12px;
   margin-left: 70px;
@@ -596,12 +606,13 @@ address p {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .connect-link a {
   display: block;
   padding: 12px;
+
 }
 
 .connect-link svg {
@@ -781,11 +792,15 @@ address p {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .modal {
